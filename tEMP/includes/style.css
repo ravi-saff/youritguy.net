@@ -1,0 +1,225 @@
+/* === General Body Styling === */
+body {
+    /*background-image: url('images/BGImageBusiness.jpeg');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 60px; /* Matches sticky navbar height */
+    color: #333;
+}
+
+html {
+    scroll-padding-top: 60px; /* Offset anchor scrolling for sticky navbar */
+}
+
+.container {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+/* === Section Styling === */
+.section {
+    margin: 10px 0;
+    padding: 15px;
+}
+
+#services .section {
+    padding-top: 0px; /* Offset for anchor jump */
+}
+
+#services .container,
+#testimonials .container,
+#contact-us .container {
+    background: white;
+}
+
+/* === Inner Content Containers === */
+.about-us-container,
+.faqs-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 750px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/* === Section Headings === */
+.about-us-heading,
+.contact-us-heading,
+.services-heading,
+.testimonials-heading,
+.faqs-heading {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: inline-block;
+    color: #4A90E2;  /* Light Blue for headings */
+}
+
+/* === Hyperlink Colors === */
+.navbar-nav .nav-link {
+    color: #3498db !important;  /* Bright Blue for navbar links */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1D8CFF !important;  /* Slightly darker blue on hover */
+}
+
+/* === Section Background Colors === */
+#about-us .section,
+#faqs .section,
+#about-us .container,
+#faqs .container {
+    background-color: white; /* White background #8AAAE5 for lighter Blue*/
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* === Navbar Styling === */
+.navbar {
+    background-color: #007bff;
+    height: 50px;
+    min-height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 0.3s ease; /* Smooth transition for height and logo */
+}
+
+.navbar.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.navbar .navbar-brand img {
+    margin-right: 10px;
+    height: 60px;  /* Default logo size */
+    width: auto;
+    transition: all 0.3s ease; /* Smooth transition for logo size */
+}
+/* === Shrinking Navbar when Scrolled === */
+.navbar.scrolled {
+    height: 50px !important;  /* Smaller navbar height */
+    background-color: #0056b3;  /* Darker navbar background on scroll */
+}
+
+.navbar.scrolled .navbar-brand img {
+    height: 50px;  /* Smaller logo size when scrolled */
+}
+
+.navbar.scrolled .navbar-nav .nav-link {
+    padding: 0.5rem 1rem; /* Adjust padding for nav links when scrolled */
+}
+/* === Navbar Menu Items (Desktop) === */
+.navbar-nav {
+    flex-direction: row;
+}
+
+.navbar-nav .nav-link {
+    color: #333 !important;
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Hover and Active Effects */
+.navbar-nav .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #0056b3 !important;
+    transform: translateY(-1px);
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #0056b3 !important;
+}
+
+/* === Individual Nav Link Colors === */
+.nav-link-services {
+    color: #ff6347 !important;  /* Tomato */
+}
+.nav-link-services:hover {
+    color: #e55347 !important;
+}
+
+.nav-link-about {
+    color: #32cd32 !important;  /* Lime Green */
+}
+.nav-link-about:hover {
+    color: #28a745 !important;
+}
+
+.nav-link-testimonials {
+    color: #20b2aa !important;  /* Light Sea Green */
+}
+.nav-link-testimonials:hover {
+    color: #17a28d !important;
+}
+
+.nav-link-faqs {
+    color: #ff1493 !important;  /* Deep Pink */
+}
+.nav-link-faqs:hover {
+    color: #e0247f !important;
+}
+
+.nav-link-contact {
+    color: #1e90ff !important;  /* Dodger Blue */
+}
+.nav-link-contact:hover {
+    color: #0069d9 !important;
+}
+
+/* === Mobile Navigation Styling === */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.95); /* Light background */
+        border-radius: 0 0 8px 8px;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav .nav-link {
+        color: #333 !important;
+        padding: 0.75rem 1rem;
+        margin: 0.25rem 0;
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        color: #0056b3 !important;
+    }
+}
+
+/* Change text color to black for "Have questions or need IT assistance?" in the Contact Us section */
+#contact-us p {
+    color: #000000; /* Black */
+}
+#services {
+    margin-top: 0;
+}
